@@ -1,2 +1,17 @@
-<h1><%= @cocktail.name %></h1>
-<p>Find me in app/views/cocktails/show.html.erb</p>
+<div class="grid-container">
+
+<div class="cocktail-image">
+  <%= image_tag("https://avatars2.githubusercontent.com/u/39675060?v=4") %>
+</div>
+
+<div class="cocktail-info">
+  <h1><%= @cocktail.name %></h1>
+  <ul>
+    <% @cocktail.doses.each do |dose| %>
+      <li><%= dose.ingredient.name %></li>
+    <% end %>
+  </ul>
+</div>
+
+
+</div>

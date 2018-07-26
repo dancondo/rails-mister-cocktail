@@ -1,0 +1,23 @@
+.wrapper {
+  padding: 48px 0;
+  background-color: black;
+  color: white;
+}
+.container {
+  h1 {
+    text-align: center;
+    color: $yellow;
+    margin: 50px 0;
+  }
+}
+.logo {
+  margin: 0 auto 160px auto;
+  color: $yellow;
+  box-shadow:
+    0 0 0 4px $text-grey,
+    0 0 0 8px $shadow-purple,
+    0 0 0 12px $text-grey;
+}
+ul {
+  list-style: none;
+}

@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  root to: "cocktails#home"
   resources :cocktails do
     resources :doses, except: [:show, :destroy]
   end
