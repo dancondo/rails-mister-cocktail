@@ -68,3 +68,8 @@ gem 'jquery-rails'
 # Security
 
 gem 'dotenv-rails', groups: [:development, :test]
+
+#Image Upload
+
+gem 'cloudinary'
+gem 'carrierwave', '~> 1.2'

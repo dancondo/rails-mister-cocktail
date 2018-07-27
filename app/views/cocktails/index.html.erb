@@ -9,7 +9,7 @@
   <% end %>
   <div class="col-xs-12 col-sm-4">
     <%= link_to cocktail do %>
-      <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.1)), url('<%= cocktail.image_url %>');">
+      <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.1)), url('<%= cl_image_path cocktail.photo %>');">
         <div class="card-filter">
           <div class="card-description">
             <h2><%= cocktail.name %></h2>
