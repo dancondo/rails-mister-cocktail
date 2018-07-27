@@ -14,14 +14,18 @@
     color: $blue;
   }
 }
-.logo {
-  margin: 0 auto 160px auto;
-  color: $yellow;
-  box-shadow:
-    0 0 0 4px $text-grey,
-    0 0 0 8px $shadow-purple,
-    0 0 0 12px $text-grey;
-}
 ul {
   list-style: none;
+}
+.modal-adjust {
+  color: black;
+  background-color: $gray;
+}
+.collapsable {
+  cursor: pointer;
+
+}
+.hidden-content {
+  max-height: 0;
+  overflow: hidden;
 }
