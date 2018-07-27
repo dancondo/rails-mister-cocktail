@@ -28,6 +28,7 @@ class CocktailsController < ApplicationController
 
   def show
     @dose = Dose.new
+    @review = Review.new
   end
 
   private
@@ -37,6 +38,7 @@ class CocktailsController < ApplicationController
   end
 
   def cocktail_params
-    params.require(:cocktail).permit(:name, :photo , doses_attributes: [:description, :cocktail_id, :ingredient_id])
+    params.require(:cocktail).permit(:name, :photo , doses_attributes: [:description, :cocktail_id, :ingredient_id],
+                                     reviews_attributes: [:content, :rating, :cocktail_id])
   end
 end

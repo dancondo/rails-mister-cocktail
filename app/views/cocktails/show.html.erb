@@ -26,9 +26,26 @@
   </div>
 </div>
 
+<% @cocktail.reviews.each do |r| %>
 
+  <div class="review">
+    <div class="stars">
+      <h4><% r.rating.times do %>
+        <i class="fas fa-star"></i>
+      <% end %></h4>
+    </div>
+    <div class="review-contetn">
+      <p><%= r.content %></p>
+    </div>
+  </div>
+<% end %>
 
-
+<div class="collapsable">
+  <h5>Comment!</h5>
+</div>
+<div class="hidden-content">
+  <%= render 'reviews/form', review: @review, cocktail: @cocktail %>
+</div>
 
 
 <div class="modal fade" id="edit-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">

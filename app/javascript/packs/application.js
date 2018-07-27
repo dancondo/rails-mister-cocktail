@@ -24,12 +24,16 @@ const listeners = () => {
     const content = tgt.nextElementSibling;
     const icon = tgt.querySelector('i');
     if (content.style.maxHeight){
-      icon.classList.remove("fa-minus");
-      icon.classList.add("fa-plus");
+      if (icon != null) {
+        icon.classList.remove("fa-minus");
+        icon.classList.add("fa-plus");
+      }
       content.style.maxHeight = null;
     } else {
-      icon.classList.remove("fa-plus");
-      icon.classList.add("fa-minus");
+      if (icon != null) {
+        icon.classList.remove("fa-minus");
+        icon.classList.add("fa-plus");
+      }
       content.style.maxHeight = content.scrollHeight + "px";
     }
   }
