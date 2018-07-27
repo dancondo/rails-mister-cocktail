@@ -64,3 +64,7 @@ gem 'font-awesome-sass', '~> 5.0.13'
 gem 'simple_form'
 gem 'autoprefixer-rails'
 gem 'jquery-rails'
+
+# Security
+
+gem 'dotenv-rails', groups: [:development, :test]
