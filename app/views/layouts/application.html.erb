@@ -11,7 +11,7 @@
 
   <body>
 
-    <% unless current_page?(action: 'home') %>
+    <% unless current_page?(controller: 'cocktails', action: 'home') %>
 
       <nav class="navbar-custom navbar-expand-lg navbar-light fixed-top">
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
@@ -36,7 +36,7 @@
 
     <%= yield %>
 
-    <% unless current_page?(action: 'home') %>
+    <% unless current_page?(controller: 'cocktails', action: 'home') %>
 
         </div>
       </div>
