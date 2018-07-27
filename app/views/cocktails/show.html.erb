@@ -7,6 +7,10 @@
     <h1><%= @cocktail.name %>
       <%= link_to new_cocktail_dose_path(@cocktail) do %>
         <small><a data-toggle="modal" data-target="#edit-modal" data-whatever="@mdo"><i class="far fa-edit"></i></small></a>
+        <small>
+          <%= link_to "<i class='delete-btn fas fa-trash'></i>".html_safe, @cocktail,
+            method: :delete,
+            data: { confirm: "Are you sure?" } %></small>
       <% end %>
     </h1>
     <ul>
