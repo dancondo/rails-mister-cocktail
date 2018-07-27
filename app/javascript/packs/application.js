@@ -31,8 +31,8 @@ const listeners = () => {
       content.style.maxHeight = null;
     } else {
       if (icon != null) {
-        icon.classList.remove("fa-minus");
-        icon.classList.add("fa-plus");
+        icon.classList.remove("fa-plus");
+        icon.classList.add("fa-minus");
       }
       content.style.maxHeight = content.scrollHeight + "px";
     }
