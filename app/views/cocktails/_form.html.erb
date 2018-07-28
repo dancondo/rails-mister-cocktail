@@ -6,5 +6,9 @@
     <%= d.association :ingredient %>
     <%= d.input :description %>
   <% end %>
-  <%= f.submit "Add Cocktail", class: "btn btn-primary" %>
+  <% if @cocktail.name %>
+    <%= f.submit "Edit Cocktail", class: "btn btn-primary" %>
+  <% else %>
+    <%= f.submit "Add Cocktail", class: "btn btn-primary" %>
+  <% end %>
 <% end %>

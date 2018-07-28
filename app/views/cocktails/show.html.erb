@@ -1,35 +1,39 @@
 <div class="grid-container">
 
-  <div class="cocktail-image" style="background-image: url('<%=  cl_image_path @cocktail.photo %>');">
-  </div>
-
-  <div class="cocktail-info">
-    <h1><%= @cocktail.name %>
-      <%= link_to new_cocktail_dose_path(@cocktail) do %>
-        <small><a data-toggle="modal" data-target="#edit-modal" data-whatever="@mdo"><i class="far fa-edit"></i></small></a>
-        <small>
-          <%= link_to "<i class='delete-btn fas fa-trash'></i>".html_safe, @cocktail,
-            method: :delete,
-            data: { confirm: "Are you sure?" } %></small>
-      <% end %>
-    </h1>
-    <ul>
-      <% @cocktail.doses.each do |dose| %>
-        <li>
-          <h5><%= dose.ingredient.name %></h5>
-          <p><%= dose.description %></p>
-        </li>
-      <% end %>
-      <div class="collapsable">
-        <h5><i class="fas fa-plus"></i>  New dose!</h5>
+  <div class="row">
+    <div class="col-xs-12 col-xl-5">
+      <div class="cocktail-image" style="background-image: url('<%=  cl_image_path @cocktail.photo %>');">
       </div>
-      <div class="hidden-content absolute">
-        <%= render 'doses/form', dose: @dose, cocktail: @cocktail %>
-      </div>
-    </ul>
-  </div>
-</div>
+    </div>
 
+    <div class="col-xs-12 col-xl-7">
+      <div class="cocktail-info">
+        <h1><%= @cocktail.name %>
+          <%= link_to new_cocktail_dose_path(@cocktail) do %>
+            <small><a data-toggle="modal" data-target="#edit-modal" data-whatever="@mdo"><i class="far fa-edit"></i></a></small>
+            <small>
+              <%= link_to "<i class='delete-btn fas fa-trash'></i>".html_safe, @cocktail,
+                method: :delete,
+                data: { confirm: "Are you sure?" } %></small>
+          <% end %>
+        </h1>
+        <ul>
+          <% @cocktail.doses.each do |dose| %>
+            <li>
+              <h5><%= dose.ingredient.name %></h5>
+              <p><%= dose.description %></p>
+            </li>
+          <% end %>
+          <div class="collapsable">
+            <h5><i class="fas fa-plus"></i>  New dose!</h5>
+          </div>
+          <div class="hidden-content absolute">
+            <%= render 'doses/form', dose: @dose, cocktail: @cocktail %>
+          </div>
+        </ul>
+      </div>
+    </div>
+  </div>
 
   <h2>Reviews</h2>
   <% @cocktail.reviews.each do |r| %>

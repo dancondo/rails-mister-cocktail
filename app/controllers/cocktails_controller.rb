@@ -19,11 +19,19 @@ class CocktailsController < ApplicationController
     if @cocktail.save
       redirect_to @cocktail
     else
-      redirect_to new_cocktail_path
+      render :new
     end
   end
 
   def edit
+  end
+
+  def update
+    if @cocktail.update(cocktail_params)
+      redirect_to @cocktail
+    else
+      render :edit
+    end
   end
 
   def show

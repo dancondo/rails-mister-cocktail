@@ -8,7 +8,6 @@
 // layout file, like app/views/layouts/application.html.erb
 
 import 'bootstrap';
-console.log('Hello World from Webpacker')
 
 document.addEventListener("turbolinks:load", () => {
   listeners();
