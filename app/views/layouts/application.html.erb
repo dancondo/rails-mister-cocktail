@@ -27,18 +27,23 @@
 
     <%= yield %>
 
-    <div class="footer">
-      <div class="footer-links">
-        <a href="#"><i class="fab fa-github"></i></a>
-        <a href="#"><i class="fab fa-facebook"></i></a>
-        <a href="#"><i class="fab fa-linkedin"></i></a>
-      </div>
-      <div class="footer-copyright">
-        This footer is made at Le Wagon Cooding Bootcamp
-      </div>
-    </div>
+    <% unless current_page?(controller: 'cocktails', action: 'home') %>
 
+        </div>
+      </div>
 
+    <% end %>
+
+    <div class="wrapper">
+      <div class="footer">
+        <div class="footer-links">
+          <a href="#"><i class="fab fa-github"></i></a>
+          <a href="#"><i class="fab fa-facebook"></i></a>
+          <a href="#"><i class="fab fa-linkedin"></i></a>
+        </div>
+        <div class="footer-copyright">
+          This footer is made at Le Wagon Cooding Bootcamp
+        </div>
       </div>
     </div>
 
