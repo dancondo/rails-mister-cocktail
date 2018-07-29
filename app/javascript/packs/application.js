@@ -23,13 +23,13 @@ const listeners = () => {
     const content = tgt.nextElementSibling;
     const icon = tgt.querySelector('i');
     if (content.style.maxHeight){
-      if (icon != null) {
+      if (icon != null && icon.classList == "fas fa-minus") {
         icon.classList.remove("fa-minus");
         icon.classList.add("fa-plus");
       }
       content.style.maxHeight = null;
     } else {
-      if (icon != null) {
+      if (icon != null && icon.classList == "fas fa-plus") {
         icon.classList.remove("fa-plus");
         icon.classList.add("fa-minus");
       }

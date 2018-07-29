@@ -18,7 +18,7 @@
 
     <%= render 'shared/navbar' %>
 
-    <% unless current_page?(controller: 'cocktails', action: 'index') %>
+    <% unless current_page?(controller: 'cocktails', action: 'home') %>
 
       <div class="wrapper">
         <div class="container">
@@ -27,23 +27,20 @@
 
     <%= yield %>
 
-    <% unless current_page?(controller: 'cocktails', action: 'home') %>
-
-        </div>
+    <div class="footer">
+      <div class="footer-links">
+        <a href="#"><i class="fab fa-github"></i></a>
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-linkedin"></i></a>
       </div>
-
-      <div class="footer">
-        <div class="footer-links">
-          <a href="#"><i class="fab fa-github"></i></a>
-          <a href="#"><i class="fab fa-facebook"></i></a>
-          <a href="#"><i class="fab fa-linkedin"></i></a>
-        </div>
-        <div class="footer-copyright">
-          This footer is made at Le Wagon Cooding Bootcamp
-        </div>
+      <div class="footer-copyright">
+        This footer is made at Le Wagon Cooding Bootcamp
       </div>
+    </div>
 
-    <% end %>
+
+      </div>
+    </div>
 
   </body>
 </html>
