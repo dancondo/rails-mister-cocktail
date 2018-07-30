@@ -7,9 +7,24 @@
   background-color: transparent;
   display: flex;
   align-items: center;
+  justify-content: space-between;
   .collapsable i{
     padding: 50px;
     font-size: 30px;
     color: $white;
+  }
+  a {
+    color: $white;
+    padding: 50px;
+    font-size: 30px;
+  }
+}
+.logo {
+  padding: 50px;
+  font-size: 30px;
+
+  span {
+    font-family: $headers-font;
+    font-size: 25px;
   }
 }

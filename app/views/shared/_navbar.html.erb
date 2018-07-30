@@ -1,18 +1,17 @@
 <nav class="my-nav">
-  <%= link_to :root do %>
-    <i class="fas fa-cocktail"></i>
+  <%= link_to :root, class: "logo" do %>
+    <i class="fas fa-glass-martini"><span>Mr. Cocktail</span></i>
   <% end %>
-  <a class="collapsable">
-    <i class="fas fa-bars"></i>
-  </a>
-  <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-    <%= link_to cocktails_path, class: "navbar-brand" do %>
-      <i class="fas fa-cocktail"></i>
-    <% end %>
-    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-      <li class="nav-item">
-        <%= link_to "New Cocktail", new_cocktail_path, class: "nav-link" %>
-      </li>
-    </ul>
-  </div>
+  <%= link_to "New Cocktail", new_cocktail_path %>
 </nav>
+
+
+<!--
+ <div class="nav-collapse">
+    <a class="collapsable">
+      <i class="fas fa-bars"></i>
+    </a>
+    <ul class="hidden-content">
+      <li><%#= link_to "New Cocktail", new_cocktail_path, class: "nav-link" %></li>
+    </ul>
+  </div> -->

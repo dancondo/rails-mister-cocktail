@@ -19,6 +19,7 @@
   justify-content: space-around;
   border-radius: 5px;
   box-shadow: 5px 5px 1px rgba($blueberry, .1);
+  cursor: pointer;
 }
 .category-content {
   font-weight: bold;
@@ -26,5 +27,5 @@
   z-index: 99999;
 }
 .category:hover {
-  transform: scale(1.1);
+  transform: scale(1.05);
 }
