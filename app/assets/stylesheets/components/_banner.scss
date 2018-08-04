@@ -1,26 +1,49 @@
 .banner {
   color: white;
   text-align: center;
-  height: 100vh;
+  height: 75vh;
   /* if you have a 70px navbar => height: calc(100vh - 70px); */
   background-size: cover !important;
+  background-repeat: no-repeat;
+  background-position: 50% 25%;
+  background-attachment: bottom;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-image: linear-gradient(-225deg, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.3) 50%),
-                                    url('https://images.unsplash.com/photo-1470337458703-46ad1756a187?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=1998822d443cf97d75258149476c5aa5&auto=format&fit=crop&w=1949&q=80');
+  background-image: linear-gradient(-225deg, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.2) 50%),
+                                        url('https://images.unsplash.com/photo-1453825012366-3738046cb6c7?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=ff64e0eec4f3a05866458ad6e4878297&auto=format&fit=crop&w=1489&q=80');
 
+  .banner-content {
+    padding-left: 650px;
+  }
   h1 {
-  font-size: 80px;
-  font-weight: bold;
-  text-shadow: 0px 8px rgba(0, 0, 0, 0.2);
-  padding: 16px;
-  box-shadow:
-    0 0 0 4px rgba(255, 255, 255, 1),
-    0 0 0 8px $shadow-purple,
-    0 0 0 12px rgba(255, 255, 255, 1);
+    font-size: 80px;
+    text-align: left;
+    text-shadow: 0px 8px rgba(0, 0, 0, 0.2);
 }
-  .btn {
-    margin-top: 32px;
+  p {
+   font-size: 30px;
+   font-family: $legend-font;
+   margin-left: 50px;
+   text-align: left;
+  }
+}
+@media (max-width: 700px) {
+  .banner {
+    height: 80vh;
+    background-image: linear-gradient(-225deg, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.2) 50%),
+                                        url('https://images.unsplash.com/photo-1516684163977-84cc7de8c7c8?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=f253df0b780b0d232da7395a8c369433&auto=format&fit=crop&w=634&q=80');
+    background-position: bottom;
+  }
+  .banner h1 {
+    display: none;
+  }
+  .banner p {
+    display: none;
+  }
+}
+@media (max-width: 1100px) {
+  .banner-content {
+    padding-left: 500px !important;
   }
 }

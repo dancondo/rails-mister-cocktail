@@ -1,5 +1,5 @@
 .grid-container {
-  display: flex;
+  // display: flex;
   padding: 40px;
   align-items: start;
   a {
@@ -8,12 +8,13 @@
 }
 .cocktail-image {
   height: 300px;
-  width: 400px;
-  background-size: cover;
+  background-size: cover !important;
   background-position: center;
 }
 .cocktail-info {
-  padding-left: 80px;
+  // max-height: 300px;
+  // overflow: scroll;
+  // overflow-x: hidden;
   h1 {
     margin: 0 0 10px 0;
     text-align: left !important;

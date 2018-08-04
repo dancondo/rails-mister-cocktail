@@ -59,8 +59,9 @@ gem 'rspec-rails', group: [ :test ]
 gem 'rails-controller-testing', group: [ :test ]
 
 #Bootstrap and Simple Form
+gem 'popper_js'
 gem 'bootstrap'
-gem 'font-awesome-sass', '~> 5.0.13'
+gem 'font-awesome-sass', '~> 5.2.0'
 gem 'simple_form'
 gem 'autoprefixer-rails'
 gem 'jquery-rails'

@@ -3,6 +3,7 @@ class CocktailsController < ApplicationController
   before_action :set_cocktail, only: [:show, :edit, :update, :destroy]
 
   def home
+    @cocktails = Cocktail.order('id DESC').limit(4)
   end
 
   def index
@@ -19,16 +20,29 @@ class CocktailsController < ApplicationController
     if @cocktail.save
       redirect_to @cocktail
     else
-      redirect_to new_cocktail_path
+      render :new
     end
   end
 
   def edit
   end
 
+  def update
+    if @cocktail.update(cocktail_params)
+      redirect_to @cocktail
+    else
+      render :edit
+    end
+  end
+
   def show
     @dose = Dose.new
     @review = Review.new
+  end
+
+  def destroy
+    @cocktail.destroy
+    redirect_to cocktails_path
   end
 
   private

@@ -1,31 +1,46 @@
-<h1>Mr. Cocktails</h1>
-
-<% @cocktails.each_with_index do |cocktail, index| %>
-  <% if index % 3 == 0 && index != 0 %>
-    </div>
-  <% end %>
-  <% if index % 3 == 0 %>
-    <div class="row">
-  <% end %>
-  <div class="col-xs-12 col-sm-4">
-    <%= link_to cocktail do %>
-      <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.1)), url('<%= cl_image_path cocktail.photo %>');">
-        <div class="card-filter">
-          <div class="card-description">
-            <h2><%= cocktail.name %></h2>
-          </div>
-          <div class="card-info">
-            <ul>
-              <% cocktail.doses.each do |dose| %>
-                <li><%= dose.ingredient.name %></li>
-              <% end %>
-            </ul>
-          </div>
-        </div>
-      </div>
-    <% end %>
+<div class="banner">
+  <div class="banner-content">
+    <h1>Mr. Cocktail</h1>
+    <p>Make Incredible Cocktails to Impress your Friends</p>
   </div>
-  <% if index == @cocktails.length - 1 %>
-    </div>
-  <% end %>
-<% end %>
+</div>
+
+<div class="wrapper">
+  <div class="container">
+
+    <% @cocktails.each_with_index do |cocktail, index| %>
+      <% if index % 3 == 0 && index != 0 %>
+        </div>
+      <% end %>
+
+      <% if index % 3 == 0 %>
+        <div class="row">
+      <% end %>
+
+      <div class="col-sm-12 col-md-6 col-xl-4">
+        <%= link_to cocktail do %>
+          <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.1)), url('<%= cl_image_path cocktail.photo %>');">
+            <div class="card-filter">
+              <div class="card-description">
+                <h2><%= cocktail.name %></h2>
+              </div>
+              <div class="card-info">
+                <ul>
+                  <% cocktail.doses.each do |dose| %>
+                    <li><%= dose.ingredient.name %></li>
+                  <% end %>
+                </ul>
+              </div>
+            </div>
+          </div>
+        <% end %>
+      </div>
+
+      <% if index == @cocktails.length - 1 %>
+
+        </div>
+
+      <% end %>
+    <% end %>
+
+  </div>

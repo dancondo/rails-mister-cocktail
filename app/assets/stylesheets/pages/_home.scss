@@ -1,4 +1,32 @@
 // Specific CSS for your home-page
-a:hover {
-  text-decoration: none;
+.home {
+  h2 {
+    text-align: left;
+    font-size: 50px;
+    padding-bottom: 25px;
+  }
+  .padding-top-title {
+    padding: 50px 0 25px 0;
+  }
+}
+.categories {
+}
+.responsive-sm {
+  display: none;
+}
+@media (max-width: 540px) {
+  .category {
+    height: 75px;
+    margin: 10px 10px;
+  }
+  .responsive-sm {
+    display: block;
+    padding: 25px 0 0 0;
+  }
+  .home .padding-top-title {
+    padding: 0;
+  }
+  .responsive-sm-hide {
+    display: none;
+  }
 }
