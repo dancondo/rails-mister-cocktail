@@ -5,9 +5,6 @@
   color: white;
 }
 .container {
-  // padding: 100px 10px;
-  // min-height: 100vh;
-  // background-color: rgba(255, 255, 255, .01);
   h1 {
     text-align: center;
     color: $main-title;
@@ -37,4 +34,7 @@ ul {
 }
 a:hover {
   text-decoration: none;
+}
+.full-page-form {
+  min-height: calc(100vh - 145px);
 }

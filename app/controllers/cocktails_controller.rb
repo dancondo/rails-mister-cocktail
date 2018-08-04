@@ -3,6 +3,7 @@ class CocktailsController < ApplicationController
   before_action :set_cocktail, only: [:show, :edit, :update, :destroy]
 
   def home
+    @cocktails = Cocktail.order('id DESC').limit(4)
   end
 
   def index

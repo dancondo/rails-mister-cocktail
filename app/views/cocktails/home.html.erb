@@ -1,49 +1,26 @@
-<div class="banner">
-  <div class="banner-content">
-    <h1>Mr. Cocktail</h1>
-    <p>Make Incredible Cocktails to Impress your Friends</p>
-  </div>
-</div>
+<%= render 'shared/banner' %>
 
 <div class="wrapper">
   <div class="container home">
-    <h2>
-      Categories |
-      <small>
-        <%= link_to cocktails_url do %>
-          Go to All <i class="fas fa-angle-right"></i>
-        <% end %>
-      </small>
-    </h2>
-    <div class="categories">
-      <div class="row">
-        <div class="col-xs-12 col-sm-6 col-lg-3">
-          <div class="category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://images.unsplash.com/photo-1517093911940-08cb5b3952e7?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=101c26932078be8b5fc48798d5b3f710&auto=format&fit=crop&w=683&q=80');">
-            <div class="category-content">
-              <h3>Refreshing</h3>
-            </div>
-          </div>
-        </div>
-        <div class="col-xs-12 col-sm-6 col-lg-3">
-          <div class="category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://images.pexels.com/photos/141815/pexels-photo-141815.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');">
-            <div class="category-content">
-              <h3>Sweet</h3>
-            </div>
-          </div>
-        </div>
-        <div class="col-xs-12 col-sm-6 col-lg-3">
-          <div class="category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://images.unsplash.com/photo-1458995511454-37bbe550c3f6?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=e98f0be116d30fd71bb628db61e11a0d&auto=format&fit=crop&w=1867&q=80');">
-            <div class="category-content">
-              <h3>Bitter</h3>
-            </div>
-          </div>
-        </div>
-        <div class="col-xs-12 col-sm-6 col-lg-3">
-          <div class="category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://images.pexels.com/photos/357577/pexels-photo-357577.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260">
-              <h3>Sour</h3>
+    <div class="row responsive-sm">
+
+
+      <div class="col-xs-12 col-sm-6 col-lg-3">
+        <div class="category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://images.unsplash.com/photo-1517093911940-08cb5b3952e7?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=101c26932078be8b5fc48798d5b3f710&auto=format&fit=crop&w=683&q=80');">
+          <div class="category-content">
+            <h3>Start Browsing</h3>
           </div>
         </div>
       </div>
     </div>
+
+    <%= render 'shared/categories' %>
+
+    <h2>
+      Latest Cocktails
+    </h2>
+
+    <%= render 'shared/display_cocktails_cards' %>
+
   </div>
 </div>
