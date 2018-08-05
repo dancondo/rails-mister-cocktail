@@ -4,7 +4,8 @@ Rails.application.routes.draw do
   get 'reviews/delete'
   get 'reviews/edit'
   get 'reviews/update'
-  root to: "cocktails#home"
+
+  root to: "pages#home"
   resources :cocktails do
     resources :doses, except: [:show, :destroy]
     resources :reviews, except: [:show, :index]

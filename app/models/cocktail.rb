@@ -2,6 +2,7 @@ class Cocktail < ApplicationRecord
   has_many :doses, dependent: :destroy
   has_many :ingredients, through: :doses
   has_many :reviews, dependent: :destroy
+  belongs_to :category
   validates :name, presence: true, uniqueness: true
   validates :photo, presence: true
   accepts_nested_attributes_for :doses
