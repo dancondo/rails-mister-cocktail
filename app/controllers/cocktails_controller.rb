@@ -2,10 +2,6 @@ class CocktailsController < ApplicationController
 
   before_action :set_cocktail, only: [:show, :edit, :update, :destroy]
 
-  def home
-    @cocktails = Cocktail.order('id DESC').limit(4)
-  end
-
   def index
     @cocktails = Cocktail.all
   end
@@ -52,7 +48,7 @@ class CocktailsController < ApplicationController
   end
 
   def cocktail_params
-    params.require(:cocktail).permit(:name, :photo , doses_attributes: [:description, :cocktail_id, :ingredient_id],
+    params.require(:cocktail).permit(:name, :photo, :category, :how_to_mix, doses_attributes: [:description, :cocktail_id, :ingredient_id],
                                      reviews_attributes: [:content, :rating, :cocktail_id])
   end
 end
